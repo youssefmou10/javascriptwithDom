@@ -2,10 +2,37 @@ var bg = document.getElementById("particles-js");
 
 document.addEventListener("keydown",function(event){
 	bg.style.backgroundColor=getRandomColor();
-	/*var a = event.key;
-	playMusic(a);*/
+	var a = event.key;
+	playMusic(a);
 	console.log(event);
 });
+
+
+function playMusic(a){
+	switch(a){
+		case "a":
+			var audio = new Audio("Kick1.wav");
+			audio.play();
+		break;
+		case "d":
+			var audio = new Audio("kick.mp3");
+			audio.play();
+		break;
+
+		case "c" :
+				var audio = new Audio("kick.mp3");
+				audio.play();
+		break;
+
+		default :
+				var audio = new Audio("Clap1.wav");
+				audio.play();
+				break;
+
+
+		}
+
+}
 
 
 function getRandomColor(){
